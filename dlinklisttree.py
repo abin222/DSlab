@@ -42,10 +42,10 @@ class Tree:
                 print("ii=",i)
             i+=1
     def traverseTree(self,root):
-         if root.data:
-             print(self.traverseTree(root.lc))
+         if root is not None:
+             self.traverseTree(root.lc)
              print(root.data)
-             print(self.traverseTree(root.rc))
+             self.traverseTree(root.rc)
 if __name__ == "__main__":
 	tree=Tree()
 	tree.constructttree("a+b*c/d")
